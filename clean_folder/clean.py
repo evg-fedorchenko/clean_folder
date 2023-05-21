@@ -73,21 +73,12 @@ def sort_files_and_folders(path):
                 item.rmdir()
 
 
-if __name__ == '__main__':
+def run():
     try:
-        source = sys.argv[1]
+        source_path = sys.argv[1]
     except IndexError:
         print("Source path is not specified.")
         exit(0)
-    create_folders(source)
-    sort_files_and_folders(source)
-    print(result)
-
-
-def run(source_path):
-    if not source_path:
-        print("Source path is not specified.")
-        return
     global source
     source = source_path
     create_folders(source)
